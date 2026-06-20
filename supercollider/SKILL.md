@@ -106,3 +106,6 @@ The `references/` directory contains curated knowledge from a comprehensive Supe
 - `synthdef-synth.md` — SynthDef/Synth lifecycle and usage
 - `debugging.md` — debugging workflow and tools
 - `recipes.md` — runnable examples for common tasks
+- `buffers-samples.md` — Buffer alloc/load, PlayBuf, BufRd, recording
+- `fx-processing.md` — filters, reverb, delay, distortion, pitch shift
+- `quarks.md` — installing and managing quark packages
