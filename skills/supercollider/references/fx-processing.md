@@ -2,6 +2,17 @@
 
 Common effect UGens and how to use them, organized by type.
 
+## Contents
+
+- Filters
+- Reverb
+- Delay
+- Distortion / saturation
+- Pitch / frequency shifting
+- Tremolo / ring modulation
+- Combining effects
+- Dry/wet mix pattern
+
 ## Filters
 
 ### Low-pass / High-pass

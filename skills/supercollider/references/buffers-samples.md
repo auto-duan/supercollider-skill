@@ -1,5 +1,15 @@
 # Buffers & Samples
 
+## Contents
+
+- What buffers are
+- Allocate and load
+- Play back a buffer
+- Scrub / random access
+- Record into a buffer
+- Common mistakes
+- Wait for load before playing
+
 ## What Buffers Are
 
 A `Buffer` is a server-side block of memory. Buffers hold audio data, wavetables, or arbitrary float arrays. They live on scsynth, not in sclang.

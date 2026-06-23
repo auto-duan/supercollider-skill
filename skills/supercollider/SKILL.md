@@ -94,18 +94,18 @@ Synth(\fx, [\in, ~fxBus, \out, 0], ~effects);
 - Pattern tracing: `Pbind(...).trace.play;`
 - Read error text → identify receiver → find first frame pointing to your code
 
-## References (load when needed)
+## References
 
-The `references/` directory contains curated knowledge from a comprehensive SuperCollider AI knowledge base:
+Load a reference file when the task calls for it. Each is self-contained — read the whole file, don't skim.
 
-- `client-server.md` — the fundamental sclang/scsynth split
-- `bus-group-node.md` — server-side routing primitives
-- `patterns.md` — pattern families reference (Pseq, Prand, Pwhite, etc.)
-- `ndef-pdef-tdef.md` — live coding proxies compared
-- `language-basics.md` — sclang syntax essentials
-- `synthdef-synth.md` — SynthDef/Synth lifecycle and usage
-- `debugging.md` — debugging workflow and tools
-- `recipes.md` — runnable examples for common tasks
-- `buffers-samples.md` — Buffer alloc/load, PlayBuf, BufRd, recording
-- `fx-processing.md` — filters, reverb, delay, distortion, pitch shift
-- `quarks.md` — installing and managing quark packages
+- **Client/server split** → read [references/client-server.md](references/client-server.md) when reasoning about what runs in sclang vs scsynth, or debugging a "wrong side" error.
+- **sclang syntax** → read [references/language-basics.md](references/language-basics.md) for variables, functions, messages, collections.
+- **Instruments** → read [references/synthdef-synth.md](references/synthdef-synth.md) when defining SynthDefs, instantiating/controlling/freeing Synths, or choosing UGens.
+- **Routing** → read [references/bus-group-node.md](references/bus-group-node.md) when wiring buses, groups, or node execution order.
+- **Sequencing** → read [references/patterns.md](references/patterns.md) for pattern families (Pseq, Prand, Pwhite, Pexprand, etc.).
+- **Live coding** → read [references/ndef-pdef-tdef.md](references/ndef-pdef-tdef.md) when hot-swapping sound (Ndef), patterns (Pdef), or tasks (Tdef).
+- **Samples** → read [references/buffers-samples.md](references/buffers-samples.md) for Buffer alloc/load, PlayBuf, BufRd, recording.
+- **Effects** → read [references/fx-processing.md](references/fx-processing.md) for filters, reverb, delay, distortion, pitch shift.
+- **Packages** → read [references/quarks.md](references/quarks.md) when installing or managing Quarks.
+- **Ready-made code** → read [references/recipes.md](references/recipes.md) for runnable examples (incl. MIDI input, OSC, offline render).
+- **Debugging** → read [references/debugging.md](references/debugging.md) for the language- vs server-side workflow and tools.

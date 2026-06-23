@@ -2,6 +2,18 @@
 
 Common tasks with copy-paste-ready code.
 
+## Contents
+
+- Minimal sine
+- Custom SynthDef with envelope
+- Simple Pbind (melody)
+- Bus effect chain
+- MIDI input
+- OSC receiver
+- Offline render (NRT)
+- GUI synth control
+- Live code with Ndef
+
 ## Minimal Sine
 
 ```supercollider
@@ -57,14 +69,22 @@ MIDIdef.noteOn({ |vel, note, chan, src|
 
 ## OSC Receiver
 
+Listen for incoming OSC messages at an address pattern:
+
 ```supercollider
-thisProcess OSCFunc({ |msg| msg.postln }, '/test');
+// One-off responder
+OSCFunc({ |msg| msg.postln }, '/test');
+
+// Named/replaceable responder (preferred for live coding)
+OSCdef(\listen, { |msg| msg.postln }, '/test');
+OSCdef(\listen).free;  // remove it
 ```
 
-(Replace space with `.`) — proper syntax: `thisProcess.addOSCRecvFunc` or use `OSCFunc`.
+Send OSC to another host with `NetAddr`:
 
 ```supercollider
-OSCFunc({ |msg| msg.postln }, '/test');
+~target = NetAddr("127.0.0.1", 57120);
+~target.sendMsg('/test', 1, 2, 3);
 ```
 
 ## Offline Render (NRT)
